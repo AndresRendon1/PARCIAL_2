@@ -1,5 +1,6 @@
 #include <iostream>
 #include <QImage>
+
 using namespace std;
 
 int main()
@@ -12,13 +13,15 @@ int main()
     //cout<<"Intensidad del Rojo: "<<im.pixelColor(pixelx,pixely).green()<<endl;
     //cout<<"Intensidad del Rojo: "<<im.pixelColor(pixelx,pixely).blue()<<endl;
     cout<<"Redimensionando imagen..."<<endl;
-    //const int alto=16;
-    const int ancho=16;
-    //im=im.scaled(alto,ancho,Qt::KeepAspectRatio);
-    //const int ancho = im.width();
-    const int alto = im.height();
+
+    int ancho = im.width();//Se obtiene el ancho
+    int alto = im.height();//Se obtiene el alto
     cout<<ancho<<","<<alto<<endl;
-    cout<<im.width()*ancho<<endl;
+    ancho = ancho/25;
+    alto = alto/25;
+
+    //im=im.scaled(alto,ancho,Qt::KeepAspectRatio);
+    cout<<ancho<<","<<alto<<endl;
     //cout<<"Imagen redimensionada con exito: "<<im.width()<<endl;
     //cout<<"Imagen redimensionada con exito: "<<im.height()<<endl;
     for(int i=0;i<16;i++){
